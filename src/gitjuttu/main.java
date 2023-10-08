@@ -10,7 +10,9 @@ public class main {
 		Scanner scanner = new Scanner(System.in);
 		Random random = new Random();
 		
-		int euro = 5;
+		 System.out.print("Syötä aloitussumma euroina: ");
+	        int euro = scanner.nextInt();
+	        scanner.nextLine();
 		
 		
 		while(euro>0) {
@@ -55,6 +57,12 @@ public class main {
                 } else {
                     System.out.println("Hävisit.");
                 }
+            }
+            System.out.println("Haluatko pelata uudestaan? Jos haluat pelata, paina Enter. Jos et halua pelata, kirjoita 'e' ja paina Enter.");
+            String vastaus = scanner.nextLine();
+
+            if ("e".equalsIgnoreCase(vastaus)) {
+                break;
             }
 
 		}
